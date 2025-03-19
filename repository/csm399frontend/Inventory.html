@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inventory System</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .inventory-container {
+            padding: 20px;
+        }
+
+        .inventory-tabs {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+
+        .inventory-tabs button {
+            padding: 10px 20px;
+            border: none;
+            background-color: #f1f1f1;
+            cursor: pointer;
+            color: #333;
+        }
+
+        .inventory-tabs button.active {
+            background-color: #333;
+            color: white;
+        }
+
+        .inventory-section {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .inventory-item {
+            padding: 20px;
+            border: 1px solid #f1f1f1;
+            border-radius: 5px;
+            text-align: center;
+        }
+
+        .inventory-item span {
+            font-size: 14px;
+            color: #666;
+        }
+
+        .search-box {
+            padding: 10px;
+            border: 1px solid #f1f1f1;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Inventory System</h1>
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="interactive_map.html">Interactive Map</a></li>
+            <li><a href="inventory.html" class="active">Inventory</a></li>
+            <li><a href="donation.html">Make a Donation</a></li>
+        </ul>
+    </nav>
+
+    <section class="inventory-container">
+        <div class="inventory-tabs">
+            <button class="active">All</button>
+            <button>Food Banks</button>
+            <button>Medical Facilities</button>
+            <button>Shelter & Housing</button>
+            <button>Fuel & Electricity</button>
+            <button>Emotional Support</button>
+            <input type="text" placeholder="Search" class="search-box">
+        </div>
+
+        <h2>Food Banks</h2>
+        <div class="inventory-section">
+            <div class="inventory-item">Food for All Africa<br><span>Spintex Road</span></div>
+            <div class="inventory-item">The Lord's Prayer Ministry Food Bank<br><span>Teshie</span></div>
+            <div class="inventory-item">Blessed Life Foundation Food Bank<br><span>Dansoman</span></div>
+            <div class="inventory-item">Ghana Food Movement<br><span>Osu</span></div>
+        </div>
+
+        <h2>Medical Facilities</h2>
+        <div class="inventory-section">
+            <div class="inventory-item">Korle-Bu Teaching Hospital<br><span>Korle Bu</span></div>
+            <div class="inventory-item">Greater Accra Regional Hospital<br><span>Ridge</span></div>
+            <div class="inventory-item">Tema General Hospital<br><span>Tema Community 9</span></div>
+            <div class="inventory-item">Ga East Municipal Hospital<br><span>Kwabenya</span></div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Disaster Relief Coordination. All rights reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

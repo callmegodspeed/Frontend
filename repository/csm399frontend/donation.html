@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Donation</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="inventory.html">Inventory</a></li>
+            <li><a href="donation.html" class="active">Make a Donation</a></li>
+        </ul>
+    </nav>
+
+    <section class="donation-container">
+        <h2>Donation</h2>
+        <form class="donation-form">
+            <fieldset>
+                <legend>Full Name</legend>
+                <input type="text" placeholder="First name" required>
+                <input type="text" placeholder="Last name" required>
+                <input type="text" placeholder="Other name(s)">
+            </fieldset>
+
+            <label>Email Address</label>
+            <input type="email" required>
+
+            <label>Phone Number</label>
+            <input type="tel" required>
+
+            <label>Type of Donation</label>
+            <div class="donation-type">
+                <input type="radio" name="donationType" id="cash" value="cash">
+                <label for="cash">Cash</label>
+                
+                <input type="radio" name="donationType" id="kind" value="kind">
+                <label for="kind">Kind</label>
+            </div>
+
+            <label>Category of Item(s)</label>
+            <div class="category-items">
+                <input type="checkbox" id="food">
+                <label for="food">Food (Non-perishable)</label><br>
+                
+                <input type="checkbox" id="clothing">
+                <label for="clothing">Clothing</label><br>
+
+                <input type="checkbox" id="medical">
+                <label for="medical">Medical Supplies</label><br>
+
+                <input type="checkbox" id="hygiene">
+                <label for="hygiene">Hygiene Kits</label><br>
+
+                <input type="checkbox" id="blankets">
+                <label for="blankets">Blankets/Bedding</label><br>
+
+                <input type="checkbox" id="other">
+                <label for="other">Other:</label>
+                <input type="text" placeholder="Specify item">
+            </div>
+
+            <label>Description of Items</label>
+            <input type="text" required>
+
+            <label>Condition</label>
+            <div class="condition">
+                <input type="radio" name="condition" id="new">
+                <label for="new">New</label>
+
+                <input type="radio" name="condition" id="used">
+                <label for="used">Gently Used</label>
+            </div>
+
+            <label>Pick up or Drop off</label>
+            <div class="pickup-dropoff">
+                <input type="radio" name="pickup" id="pickup">
+                <label for="pickup">Pick up</label>
+
+                <input type="radio" name="pickup" id="dropoff">
+                <label for="dropoff">Drop off</label>
+            </div>
+
+            <label>Preferred Date and Time</label>
+            <div class="datetime">
+                <input type="number" placeholder="Day">
+                <input type="number" placeholder="Month">
+                <input type="number" placeholder="Year">
+                <input type="number" placeholder="Hour">
+                <input type="number" placeholder="Minute">
+                <select title="Select AM or PM">
+                    <option>AM</option>
+                    <option>PM</option>
+                </select>
+            </div>
+
+            <label>Consent & Communication Preferences</label>
+            <div class="consent">
+                <input type="checkbox" id="terms">
+                <label for="terms">I agree to the terms and conditions</label><br>
+
+                <input type="checkbox" id="updates">
+                <label for="updates">Receive updates on donation usage</label><br>
+
+                <input type="checkbox" id="newsletter">
+                <label for="newsletter">Subscribe to newsletter</label>
+            </div>
+
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Disaster Relief Coordination</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
