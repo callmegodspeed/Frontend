@@ -4,53 +4,72 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Interactive Map</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="interactive map.css">
     <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <!-- Add a modern font from Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- Header -->
     <header>
-        <h1>Interactive Map</h1>
+        <div class="logo">ReliefAid</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="interactive map.html" class="active">Interactive Map</a></li>
+                <li><a href="inventory.html">Inventory</a></li>
+                <li><a href="donation.html">Make a Donation</a></li>
+            </ul>
+        </nav>
     </header>
-    <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="interactive_map.html">Interactive Map</a></li>
-            <li><a href="inventory.html" class="active">Inventory</a></li>
-            <li><a href="donation.html">Make a Donation</a></li>
-        </ul>
-    </nav>
 
-    <div class="container">
+    <!-- Main Content -->
+    <main class="container">
         <!-- Map Section -->
         <div id="map"></div>
 
         <!-- Sidebar -->
         <div class="sidebar">
+            <h2>Map Layers</h2>
             <div class="category">
-                <div class="box"></div>
+                <div class="box" style="background-color: #3498db;"></div>
                 <p>Flood</p>
             </div>
             <div class="category">
-                <div class="box"></div>
+                <div class="box" style="background-color: #e74c3c;"></div>
                 <p>Bushfires</p>
             </div>
             <div class="category wide">
-                <div class="box"></div>
+                <div class="box" style="background-color: #2ecc71;"></div>
                 <p>AI Flood Detection</p>
             </div>
             <div class="category">
-                <div class="box"></div>
-                <p>Temp.</p>
+                <div class="box" style="background-color: #f1c40f;"></div>
+                <p>Temperature</p>
             </div>
             <div class="category">
-                <div class="box"></div>
+                <div class="box" style="background-color: #9b59b6;"></div>
                 <p>Wind</p>
             </div>
         </div>
+    </main>
+
+    <!-- How to Use the Map -->
+    <div class="map-guide">
+        <h3>How to Use the Map</h3>
+        <ul>
+            <li><strong>Zoom In/Out:</strong> Use the scroll wheel or +/- buttons.</li>
+            <li><strong>Search:</strong> Enter a location in the search bar.</li>
+            <li><strong>Click Markers:</strong> View details about a location.</li>
+        </ul>
     </div>
 
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Disaster Relief Coordination. All rights reserved.</p>
+    </footer>
+
     <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
-    <script src="script.js"></script>
     <script src="script.js"></script>
 </body>
 </html>

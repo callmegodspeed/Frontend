@@ -7,49 +7,53 @@
     <link rel="stylesheet" href="donation.css">
 </head>
 <body>
+    <!-- Header -->
     <header>
-        <h1>Donation</h1>
+        <div class="logo">ReliefAid</div>
         <nav>
             <ul>
-                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html">Home</a></li> <!-- Added Home link -->
+                <li><a href="interactive map.html">Interactive Map</a></li>
                 <li><a href="inventory.html">Inventory</a></li>
                 <li><a href="donation.html" class="active">Make a Donation</a></li>
             </ul>
         </nav>
     </header>
 
+    <!-- Donation Form Section -->
     <section class="donation-container">
         <h2>Make a Donation</h2>
         <form class="donation-form">
-            <!-- Full Name Section -->
-            <label class="input-header">Full Name</label>
+            <!-- Full Name -->
             <fieldset>
-                <input type="text" placeholder="First name" required>
-                <input type="text" placeholder="Last name" required>
-                <input type="text" placeholder="Other name(s)">
+                <legend>Full Name</legend>
+                <input type="text" id="first-name" placeholder="First name" required>
+                <input type="text" id="last-name" placeholder="Last name" required>
+                <input type="text" id="other-names" placeholder="Other name(s)">
             </fieldset>
 
             <!-- Email Address -->
-            <label class="input-header">Email Address</label>
-            <input type="email" required>
+            <label for="email">Email Address</label>
+            <input type="email" id="email" required>
 
             <!-- Phone Number -->
-            <label class="input-header">Phone Number</label>
-            <input type="tel" required>
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" required>
 
             <!-- Type of Donation -->
-            <label class="input-header">Type of Donation</label>
+            <fieldset>
+                <legend>Type of Donation</legend>
                 <div class="donation-type">
-                    <input type="radio" name="donationType" id="cash" value="cash">
+                    <input type="radio" name="donationType" id="cash" value="cash" aria-label="Cash Donation">
                     <label for="cash">Cash</label>
-                    
-                    <input type="radio" name="donationType" id="kind" value="kind">
+                    <input type="radio" name="donationType" id="kind" value="kind" aria-label="Kind Donation">
                     <label for="kind">Kind</label>
                 </div>
-    
+            </fieldset>
+
             <!-- Category of Items -->
-            <label class="input-header">Category of Item(s)</label>
-            <div class="category-items">
+            <fieldset>
+                <legend>Category of Item(s)</legend>
                 <div class="category-items">
                     <label><input type="checkbox" name="category" value="food"> Food (Non-perishable)</label>
                     <label><input type="checkbox" name="category" value="clothing"> Clothing</label>
@@ -57,63 +61,68 @@
                     <label><input type="checkbox" name="category" value="hygiene"> Hygiene Kits</label>
                     <label><input type="checkbox" name="category" value="bedding"> Blankets/Bedding</label>
                     <label><input type="checkbox" name="category" value="other"> Other:</label>
-                <input type="text" placeholder="Specify item">
-            </div>
+                    <input type="text" placeholder="Specify item">
+                </div>
+            </fieldset>
 
             <!-- Description of Items -->
-            <label class="input-header">Description of Items</label>
-            <input type="text" required>
+            <label for="description">Description of Items</label>
+            <input type="text" id="description" required>
 
             <!-- Condition -->
-            <label class="input-header">Condition</label>
-            <div class="condition">
-                <label><input type="radio" name="condition" id="new"> New</label>
-                <label><input type="radio" name="condition" id="used"> Gently Used</label>
-            </div>
+            <fieldset>
+                <legend>Condition</legend>
+                <div class="condition">
+                    <label><input type="radio" name="condition" id="new"> New</label>
+                    <label><input type="radio" name="condition" id="used"> Gently Used</label>
+                </div>
+            </fieldset>
 
             <!-- Pick up or Drop off -->
-            <label class="input-header">Pick up or Drop off</label>
-            <div class="pickup-dropoff">
-                <label><input type="radio" name="pickup_dropoff" id="pickup"> Pick up</label>
-                <label><input type="radio" name="pickup_dropoff" id="dropoff"> Drop off</label>
-            </div>
+            <fieldset>
+                <legend>Pick up or Drop off</legend>
+                <div class="pickup-dropoff">
+                    <label><input type="radio" name="pickup_dropoff" id="pickup"> Pick up</label>
+                    <label><input type="radio" name="pickup_dropoff" id="dropoff"> Drop off</label>
+                </div>
+            </fieldset>
 
             <!-- Preferred Date and Time -->
-            <label class="input-header">Preferred Date</label>
-            <input type="date" required>
+            <label for="date">Preferred Date</label>
+            <input type="date" id="date" required>
 
-            <label class="input-header">Preferred Time</label>
-            <input type="time" required>
+            <label for="time">Preferred Time</label>
+            <input type="time" id="time" required>
 
-           <!-- Consent & Communication Preferences -->
-            <label class="input-header">Consent & Communication Preferences</label>
-            <div class="consent">
-                <label class="checkbox-container">
-                    <input type="checkbox" id="terms">
-                    <span class="checkmark"></span>
-                    I agree to the terms and conditions
-                </label>
+            <!-- Consent & Communication Preferences -->
+            <fieldset>
+                <legend>Consent & Communication Preferences</legend>
+                <div class="consent">
+                    <label class="checkbox-container">
+                        <input type="checkbox" id="terms">
+                        <span class="checkmark"></span>
+                        I agree to the terms and conditions
+                    </label>
+                    <label class="checkbox-container">
+                        <input type="checkbox" id="updates">
+                        <span class="checkmark"></span>
+                        Receive updates on donation usage
+                    </label>
+                    <label class="checkbox-container">
+                        <input type="checkbox" id="newsletter">
+                        <span class="checkmark"></span>
+                        Subscribe to newsletter
+                    </label>
+                </div>
+            </fieldset>
 
-                <label class="checkbox-container">
-                    <input type="checkbox" id="updates">
-                    <span class="checkmark"></span>
-                    Receive updates on donation usage
-                </label>
-
-                <label class="checkbox-container">
-                    <input type="checkbox" id="newsletter">
-                    <span class="checkmark"></span>
-                    Subscribe to newsletter
-                </label>
-            </div>
-
-
-            <button type="submit">Submit</button>
+            <button type="submit" class="btn">Submit</button>
         </form>
     </section>
 
+    <!-- Footer -->
     <footer>
-        <p>&copy; 2025 Disaster Relief Coordination</p>
+        <p>&copy; 2025 Disaster Relief Coordination. All rights reserved.</p>
     </footer>
     <script src="script.js"></script>
 </body>

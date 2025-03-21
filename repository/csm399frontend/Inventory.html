@@ -5,69 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inventory System</title>
     <link rel="stylesheet" href="style.css">
-    <style>
-        .inventory-container {
-            padding: 20px;
-        }
-
-        .inventory-tabs {
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 20px;
-        }
-
-        .inventory-tabs button {
-            padding: 10px 20px;
-            border: none;
-            background-color: #f1f1f1;
-            cursor: pointer;
-            color: #333;
-        }
-
-        .inventory-tabs button.active {
-            background-color: #333;
-            color: white;
-        }
-
-        .inventory-section {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 20px;
-        }
-
-        .inventory-item {
-            padding: 20px;
-            border: 1px solid #f1f1f1;
-            border-radius: 5px;
-            text-align: center;
-        }
-
-        .inventory-item span {
-            font-size: 14px;
-            color: #666;
-        }
-
-        .search-box {
-            padding: 10px;
-            border: 1px solid #f1f1f1;
-            border-radius: 5px;
-        }
-    </style>
+    <link rel="stylesheet" href="Inventory.css">
+    <!-- Add a modern font from Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- Header -->
     <header>
-        <h1>Inventory System</h1>
+        <div class="logo">ReliefAid</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="interactive map.html">Interactive Map</a></li>
+                <li><a href="inventory.html" class="active">Inventory</a></li>
+                <li><a href="donation.html">Make a Donation</a></li>
+            </ul>
+        </nav>
     </header>
-    
-    <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="interactive_map.html">Interactive Map</a></li>
-            <li><a href="inventory.html" class="active">Inventory</a></li>
-            <li><a href="donation.html">Make a Donation</a></li>
-        </ul>
-    </nav>
 
+    <!-- Inventory Section -->
     <section class="inventory-container">
         <div class="inventory-tabs">
             <button class="active">All</button>
@@ -79,6 +35,7 @@
             <input type="text" placeholder="Search" class="search-box">
         </div>
 
+        <!-- Food Banks Section -->
         <h2>Food Banks</h2>
         <div class="inventory-section">
             <div class="inventory-item">Food for All Africa<br><span>Spintex Road</span></div>
@@ -87,6 +44,7 @@
             <div class="inventory-item">Ghana Food Movement<br><span>Osu</span></div>
         </div>
 
+        <!-- Medical Facilities Section -->
         <h2>Medical Facilities</h2>
         <div class="inventory-section">
             <div class="inventory-item">Korle-Bu Teaching Hospital<br><span>Korle Bu</span></div>
@@ -94,8 +52,36 @@
             <div class="inventory-item">Tema General Hospital<br><span>Tema Community 9</span></div>
             <div class="inventory-item">Ga East Municipal Hospital<br><span>Kwabenya</span></div>
         </div>
+
+        <!-- Shelter & Housing Section -->
+        <h2>Shelter & Housing</h2>
+        <div class="inventory-section">
+            <div class="inventory-item">Safe Haven Shelter<br><span>Accra Central</span></div>
+            <div class="inventory-item">Hope Housing Project<br><span>East Legon</span></div>
+            <div class="inventory-item">Community Refuge Center<br><span>Madina</span></div>
+            <div class="inventory-item">Temporary Housing Solutions<br><span>Ashaiman</span></div>
+        </div>
+
+        <!-- Fuel & Electricity Section -->
+        <h2>Fuel & Electricity</h2>
+        <div class="inventory-section">
+            <div class="inventory-item">National Fuel Assistance Program<br><span>Accra</span></div>
+            <div class="inventory-item">Emergency Power Solutions<br><span>Tema</span></div>
+            <div class="inventory-item">Solar Energy for All<br><span>Kumasi</span></div>
+            <div class="inventory-item">Fuel Distribution Centers<br><span>Tamale</span></div>
+        </div>
+
+        <!-- Emotional Support Section -->
+        <h2>Emotional Support</h2>
+        <div class="inventory-section">
+            <div class="inventory-item">Mental Health First Aid<br><span>Accra</span></div>
+            <div class="inventory-item">Crisis Counseling Services<br><span>Kumasi</span></div>
+            <div class="inventory-item">Community Support Groups<br><span>Cape Coast</span></div>
+            <div class="inventory-item">Trauma Recovery Center<br><span>Takoradi</span></div>
+        </div>
     </section>
 
+    <!-- Footer -->
     <footer>
         <p>&copy; 2025 Disaster Relief Coordination. All rights reserved.</p>
     </footer>
