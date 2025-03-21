@@ -4,113 +4,109 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Donation</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="donation.css">
 </head>
 <body>
     <header>
         <h1>Donation</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="inventory.html">Inventory</a></li>
+                <li><a href="donation.html" class="active">Make a Donation</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="inventory.html">Inventory</a></li>
-            <li><a href="donation.html" class="active">Make a Donation</a></li>
-        </ul>
-    </nav>
-
     <section class="donation-container">
-        <h2>Donation</h2>
+        <h2>Make a Donation</h2>
         <form class="donation-form">
+            <!-- Full Name Section -->
+            <label class="input-header">Full Name</label>
             <fieldset>
-                <legend>Full Name</legend>
                 <input type="text" placeholder="First name" required>
                 <input type="text" placeholder="Last name" required>
                 <input type="text" placeholder="Other name(s)">
             </fieldset>
 
-            <label>Email Address</label>
+            <!-- Email Address -->
+            <label class="input-header">Email Address</label>
             <input type="email" required>
 
-            <label>Phone Number</label>
+            <!-- Phone Number -->
+            <label class="input-header">Phone Number</label>
             <input type="tel" required>
 
-            <label>Type of Donation</label>
-            <div class="donation-type">
-                <input type="radio" name="donationType" id="cash" value="cash">
-                <label for="cash">Cash</label>
-                
-                <input type="radio" name="donationType" id="kind" value="kind">
-                <label for="kind">Kind</label>
-            </div>
-
-            <label>Category of Item(s)</label>
+            <!-- Type of Donation -->
+            <label class="input-header">Type of Donation</label>
+                <div class="donation-type">
+                    <input type="radio" name="donationType" id="cash" value="cash">
+                    <label for="cash">Cash</label>
+                    
+                    <input type="radio" name="donationType" id="kind" value="kind">
+                    <label for="kind">Kind</label>
+                </div>
+    
+            <!-- Category of Items -->
+            <label class="input-header">Category of Item(s)</label>
             <div class="category-items">
-                <input type="checkbox" id="food">
-                <label for="food">Food (Non-perishable)</label><br>
-                
-                <input type="checkbox" id="clothing">
-                <label for="clothing">Clothing</label><br>
-
-                <input type="checkbox" id="medical">
-                <label for="medical">Medical Supplies</label><br>
-
-                <input type="checkbox" id="hygiene">
-                <label for="hygiene">Hygiene Kits</label><br>
-
-                <input type="checkbox" id="blankets">
-                <label for="blankets">Blankets/Bedding</label><br>
-
-                <input type="checkbox" id="other">
-                <label for="other">Other:</label>
+                <div class="category-items">
+                    <label><input type="checkbox" name="category" value="food"> Food (Non-perishable)</label>
+                    <label><input type="checkbox" name="category" value="clothing"> Clothing</label>
+                    <label><input type="checkbox" name="category" value="medical"> Medical Supplies</label>
+                    <label><input type="checkbox" name="category" value="hygiene"> Hygiene Kits</label>
+                    <label><input type="checkbox" name="category" value="bedding"> Blankets/Bedding</label>
+                    <label><input type="checkbox" name="category" value="other"> Other:</label>
                 <input type="text" placeholder="Specify item">
             </div>
 
-            <label>Description of Items</label>
+            <!-- Description of Items -->
+            <label class="input-header">Description of Items</label>
             <input type="text" required>
 
-            <label>Condition</label>
+            <!-- Condition -->
+            <label class="input-header">Condition</label>
             <div class="condition">
-                <input type="radio" name="condition" id="new">
-                <label for="new">New</label>
-
-                <input type="radio" name="condition" id="used">
-                <label for="used">Gently Used</label>
+                <label><input type="radio" name="condition" id="new"> New</label>
+                <label><input type="radio" name="condition" id="used"> Gently Used</label>
             </div>
 
-            <label>Pick up or Drop off</label>
+            <!-- Pick up or Drop off -->
+            <label class="input-header">Pick up or Drop off</label>
             <div class="pickup-dropoff">
-                <input type="radio" name="pickup" id="pickup">
-                <label for="pickup">Pick up</label>
-
-                <input type="radio" name="pickup" id="dropoff">
-                <label for="dropoff">Drop off</label>
+                <label><input type="radio" name="pickup_dropoff" id="pickup"> Pick up</label>
+                <label><input type="radio" name="pickup_dropoff" id="dropoff"> Drop off</label>
             </div>
 
-            <label>Preferred Date and Time</label>
-            <div class="datetime">
-                <input type="number" placeholder="Day">
-                <input type="number" placeholder="Month">
-                <input type="number" placeholder="Year">
-                <input type="number" placeholder="Hour">
-                <input type="number" placeholder="Minute">
-                <select title="Select AM or PM">
-                    <option>AM</option>
-                    <option>PM</option>
-                </select>
-            </div>
+            <!-- Preferred Date and Time -->
+            <label class="input-header">Preferred Date</label>
+            <input type="date" required>
 
-            <label>Consent & Communication Preferences</label>
+            <label class="input-header">Preferred Time</label>
+            <input type="time" required>
+
+           <!-- Consent & Communication Preferences -->
+            <label class="input-header">Consent & Communication Preferences</label>
             <div class="consent">
-                <input type="checkbox" id="terms">
-                <label for="terms">I agree to the terms and conditions</label><br>
+                <label class="checkbox-container">
+                    <input type="checkbox" id="terms">
+                    <span class="checkmark"></span>
+                    I agree to the terms and conditions
+                </label>
 
-                <input type="checkbox" id="updates">
-                <label for="updates">Receive updates on donation usage</label><br>
+                <label class="checkbox-container">
+                    <input type="checkbox" id="updates">
+                    <span class="checkmark"></span>
+                    Receive updates on donation usage
+                </label>
 
-                <input type="checkbox" id="newsletter">
-                <label for="newsletter">Subscribe to newsletter</label>
+                <label class="checkbox-container">
+                    <input type="checkbox" id="newsletter">
+                    <span class="checkmark"></span>
+                    Subscribe to newsletter
+                </label>
             </div>
+
 
             <button type="submit">Submit</button>
         </form>
