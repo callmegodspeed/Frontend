@@ -399,3 +399,34 @@ function initializeTestimonialSlider() {
         handleInventoryTabs();
     }
 });
+
+// Back to Top Button
+const backToTopButton = document.getElementById('backToTop');
+
+window.addEventListener('scroll', () => {
+    if (window.scrollY > 300) {
+        backToTopButton.style.display = 'block';
+    } else {
+        backToTopButton.style.display = 'none';
+    }
+});
+
+backToTopButton.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+
+// Search Functionality
+const searchBox = document.getElementById('searchBox');
+const inventoryItems = document.querySelectorAll('.inventory-item');
+
+searchBox.addEventListener('input', () => {
+    const searchTerm = searchBox.value.toLowerCase();
+    inventoryItems.forEach(item => {
+        const text = item.textContent.toLowerCase();
+        if (text.includes(searchTerm)) {
+            item.style.display = 'block';
+        } else {
+            item.style.display = 'none';
+        }
+    });
+});
