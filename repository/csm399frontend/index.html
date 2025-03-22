@@ -29,29 +29,81 @@
 
     <!-- Hero Section -->
     <section class="hero">
-        <h1>Helping Communities in Crisis</h1>
-        <p>Providing real-time disaster updates and relief coordination.</p>
-        <div class="hero-buttons">
-            <a href="get-help.html" class="btn">Get Help</a>
-            <a href="donation.html" class="btn donate">Donate Now</a>
+        <div class="hero-images">
+            <img src="images/hero-image1.jpg" alt="Hero Image 1" class="hero-image active">
+            <img src="images/hero-image2.jpg" alt="Hero Image 2" class="hero-image">
+            <img src="images/hero-image3.jpg" alt="Hero Image 3" class="hero-image">
+        </div>
+        <div class="hero-content">
+            <h1>Helping Communities in Crisis</h1>
+            <p>Providing real-time disaster updates and relief coordination.</p>
+            <div class="hero-buttons">
+                <a href="get-help.html" class="btn">Get Help</a>
+                <a href="donation.html" class="btn donate">Donate Now</a>
+            </div>
         </div>
     </section>
 
+
     <!-- Features Section -->
-    <section class="features">
-        <div class="feature">
-            <h2>Real-time Disaster Updates</h2>
-            <p>Stay informed with AI-powered disaster predictions.</p>
+<section class="features">
+    <h2>Key Features</h2>
+    <div class="feature-cards">
+        <!-- Flood Card -->
+        <div class="disaster-card flood">
+            <div class="disaster-header">
+                <h3>Flood Updates</h3>
+                <span class="update-time">Last updated: 5 minutes ago</span>
+            </div>
+            <div class="disaster-content">
+                <p>Current flood-affected areas and relief efforts.</p>
+                <ul>
+                    <li><strong>Accra, Ghana</strong> - Severity: High</li>
+                    <li><strong>Kumasi, Ghana</strong> - Severity: Medium</li>
+                </ul>
+            </div>
+            <div class="disaster-footer">
+                <a href="interactive map.html?type=flood" class="btn">View All Flood Updates</a>
+            </div>
         </div>
-        <div class="feature">
-            <h2>Resource Locator</h2>
-            <p>Find shelters, food, and medical aid nearby.</p>
+
+        <!-- Bushfire Card -->
+        <div class="disaster-card fire">
+            <div class="disaster-header">
+                <h3>Bushfire Updates</h3>
+                <span class="update-time">Last updated: 10 minutes ago</span>
+            </div>
+            <div class="disaster-content">
+                <p>Current bushfire-affected areas and relief efforts.</p>
+                <ul>
+                    <li><strong>Tamale, Ghana</strong> - Severity: High</li>
+                    <li><strong>Cape Coast, Ghana</strong> - Severity: Medium</li>
+                </ul>
+            </div>
+            <div class="disaster-footer">
+                <a href="interactive map.html?type=bushfire" class="btn">View All Bushfire Updates</a>
+            </div>
         </div>
-        <div class="feature">
-            <h2>Volunteer & Donation Management</h2>
-            <p>Connect with relief organizations and contribute effectively.</p>
+
+        <!-- Earthquake Card -->
+        <div class="disaster-card earthquake">
+            <div class="disaster-header">
+                <h3>Earthquake Updates</h3>
+                <span class="update-time">Last updated: 15 minutes ago</span>
+            </div>
+            <div class="disaster-content">
+                <p>Current earthquake-affected areas and relief efforts.</p>
+                <ul>
+                    <li><strong>Takoradi, Ghana</strong> - Severity: Low</li>
+                    <li><strong>Ho, Ghana</strong> - Severity: Medium</li>
+                </ul>
+            </div>
+            <div class="disaster-footer">
+                <a href="interactive map.html?type=earthquake" class="btn">View All Earthquake Updates</a>
+            </div>
         </div>
-    </section>
+    </div>
+</section>
 
     <!-- Testimonials Section -->
     <section class="testimonials">
@@ -132,14 +184,20 @@
     <section class="news">
         <h2>Latest News</h2>
         <div class="news-item">
-            <h3>Flood Relief Efforts in Accra</h3>
-            <p>Learn how we're helping communities affected by the recent floods.</p>
-            <a href="#">Read More</a>
+            <img src="images/flood-relief.jpg" alt="Flood Relief Efforts">
+            <div class="news-content">
+                <h3>Flood Relief Efforts in Accra</h3>
+                <p>Learn how we're helping communities affected by the recent floods.</p>
+                <a href="#">Read More</a>
+            </div>
         </div>
         <div class="news-item">
-            <h3>New Shelter Opens in Kumasi</h3>
-            <p>A new shelter has been established to support displaced families.</p>
-            <a href="#">Read More</a>
+            <img src="images/new-shelter.jpg" alt="New Shelter Opens">
+            <div class="news-content">
+                <h3>New Shelter Opens in Kumasi</h3>
+                <p>A new shelter has been established to support displaced families.</p>
+                <a href="#">Read More</a>
+            </div>
         </div>
     </section>
 
@@ -152,19 +210,19 @@
     </section>
 
     <!-- Footer -->
-    <footer>
-        <div class="footer-links">
-            <a href="about.html">About Us</a>
-            <a href="contact.html">Contact</a>
-            <a href="privacy.html">Privacy Policy</a>
-        </div>
-        <div class="social-media">
-            <a href="#"><img src="facebook-icon.png" alt="Facebook"></a>
-            <a href="#"><img src="twitter-icon.png" alt="Twitter"></a>
-            <a href="#"><img src="instagram-icon.png" alt="Instagram"></a>
-        </div>
-        <p>&copy; 2025 Disaster Relief Coordination. All rights reserved.</p>
-    </footer>
+<footer>
+    <div class="footer-links">
+        <a href="about.html">About Us</a>
+        <a href="contact.html">Contact</a>
+        <a href="privacy.html">Privacy Policy</a>
+    </div>
+    <div class="social-media">
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+    </div>
+    <p>&copy; 2025 Disaster Relief Coordination. All rights reserved.</p>
+</footer>
 
     <!-- Live Chat Widget -->
     <div class="chat-widget">

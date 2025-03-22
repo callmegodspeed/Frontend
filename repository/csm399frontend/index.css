@@ -66,27 +66,69 @@ nav ul li a.active {
 .hero {
     text-align: center;
     padding: 100px var(--spacing);
-    background: rgba(255, 255, 255, 0.8);
     margin: var(--spacing) auto;
     max-width: var(--max-width);
     border-radius: 10px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    background-image: url('images/hero-image.jpg'); /* Add your hero image */
+    background-size: cover; /* Ensure the image covers the entire section */
+    background-position: center; /* Center the image */
+    color: white; /* Change text color to contrast with the background */
+    position: relative; /* For overlay */
+    overflow: hidden;
 }
 
-.hero h1 {
-    font-size: 2.5rem;
-    margin-bottom: var(--spacing);
+.hero-images {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
 }
 
-.hero p {
-    font-size: 1.2rem;
-    margin-bottom: var(--spacing);
+.hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
 }
 
+.hero-image.active {
+    opacity: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    color: white;
+    padding: var(--spacing);
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+}
+
+/* Overlay to improve text readability */
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); /* Dark overlay */
+    border-radius: 10px;
+    z-index: 1;
+}
+
+.hero h1,
+.hero p,
 .hero-buttons {
-    display: flex;
-    justify-content: center;
-    gap: var(--spacing);
+    position: relative; /* Ensure text is above the overlay */
+    z-index: 2;
 }
 
 /* Testimonials Section */
@@ -155,7 +197,6 @@ nav ul li a.active {
     background-color: var(--primary-color);
 }
 
-/* Map Preview Section */
 /* Map Preview Section */
 .map-preview {
     text-align: center;
@@ -233,31 +274,102 @@ nav ul li a.active {
 
 /* Features Section */
 .features {
-    display: flex;
-    justify-content: space-around;
+    text-align: center;
     padding: var(--spacing);
     max-width: var(--max-width);
     margin: var(--spacing) auto;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.features h2 {
+    font-size: 2rem;
+    margin-bottom: var(--spacing);
+}
+
+.feature-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: var(--spacing);
 }
 
-.feature {
-    text-align: center;
-    background: rgba(255, 255, 255, 0.9);
-    padding: var(--spacing);
+/* Disaster Card */
+.disaster-card {
+    background: white;
     border-radius: 10px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    flex: 1;
+    padding: var(--spacing);
+    border-top: 5px solid; /* Add a colored border to indicate disaster type */
 }
 
-.feature h2 {
+.disaster-card.flood {
+    border-top-color: #3498db; /* Blue for floods */
+}
+
+.disaster-card.fire {
+    border-top-color: #e74c3c; /* Red for bushfires */
+}
+
+.disaster-card.earthquake {
+    border-top-color: #f1c40f; /* Yellow for earthquakes */
+}
+
+.disaster-header {
+    margin-bottom: var(--spacing);
+}
+
+.disaster-header h3 {
     font-size: 1.5rem;
+    color: #333;
+}
+
+.update-time {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.disaster-content {
+    margin-bottom: var(--spacing);
+}
+
+.disaster-content p {
+    font-size: 1rem;
+    color: #555;
     margin-bottom: 10px;
 }
 
-.feature p {
-    font-size: 1rem;
-    color: #555;
+.disaster-content ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.disaster-content li {
+    font-size: 0.9rem;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.disaster-content li strong {
+    color: #333;
+}
+
+.disaster-footer {
+    text-align: center;
+}
+
+.disaster-footer .btn {
+    background: var(--primary-color);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background 0.3s ease;
+}
+
+.disaster-footer .btn:hover {
+    background: #d42a6a;
 }
 
 /* Testimonials Section */
@@ -312,7 +424,18 @@ nav ul li a.active {
 }
 
 .news-item {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing);
     margin-bottom: var(--spacing);
+    text-align: left;
+}
+
+.news-item img {
+    width: 150px; /* Adjust image width */
+    height: 100px; /* Adjust image height */
+    border-radius: 10px;
+    object-fit: cover; /* Ensure images maintain aspect ratio */
 }
 
 .news-item h3 {
@@ -335,6 +458,30 @@ nav ul li a.active {
     color: #d42a6a;
 }
 
+.news-content {
+    flex: 1;
+}
+
+.news-content h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.news-content p {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.news-content a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.news-content a:hover {
+    color: #d42a6a;
+}
 /* Volunteer/Partner Section */
 .cta {
     text-align: center;
@@ -379,13 +526,35 @@ footer {
     color: var(--primary-color);
 }
 
+/* Social Media Icons */
 .social-media {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
     margin-bottom: var(--spacing);
 }
 
-.social-media img {
-    width: 24px;
-    margin: 0 10px;
+.social-media a {
+    color: #333;
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+}
+
+.social-media a:hover {
+    color: var(--primary-color);
+}
+
+/* Optional: Brand Colors on Hover */
+.social-media .fa-facebook:hover {
+    color: #1877f2; /* Facebook blue */
+}
+
+.social-media .fa-twitter:hover {
+    color: #1da1f2; /* Twitter blue */
+}
+
+.social-media .fa-instagram:hover {
+    color: #e4405f; /* Instagram pink */
 }
 
 /* Live Chat Widget */
@@ -439,5 +608,14 @@ footer {
 
     #mini-map {
         width: 100%;
+    }
+    .news-item {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .news-item img {
+        width: 100%;
+        height: auto;
     }
 }
